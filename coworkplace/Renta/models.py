@@ -9,8 +9,8 @@ from datetime import date, datetime
 class Reserva(models.Model):
     usuario = models.ForeignKey(Perfil, on_delete=models.SET_NULL, null=True, blank=True)
     idLugar = models.ForeignKey(Lugar, on_delete=models.CASCADE,  null=True, blank=True)
-    Fecha_ini_reserva = models.DateField(auto_now_add=True)
-    Fecha_fin_reserva = models.DateField(auto_now_add=True)
+    Fecha_ini_reserva = models.DateField()
+    Fecha_fin_reserva = models.DateField()
     Pago_confirmado = models.BooleanField(blank = True, null=True)
     Estado_reserva = models.BooleanField(blank = True, null=True)
 
